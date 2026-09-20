@@ -1,3 +1,7 @@
 <h1>Unchecked Alibi</h1>
 
-We’re developing **Unchecked Alibi**, a first person 3D narrative, mystery game where the player experiences life changes through the perspective of someone living with dementia as a way of helping players understand how they can better interact with and support people living with dementia in reality.
+<h2>About the Game</h2>
+
+Unchecked Alibi is a first-person 3D narrative mystery game that explores how dementia can affect memory, communication, recognition, and everyday experiences. Players experience these changes from the perspective of the protagonist while interacting with characters and investigating their environment as the story progresses.
+<br><br>
+The game aims to encourage greater understanding of and empathy toward people living with dementia and provide examples of supportive ways to interact with them.
