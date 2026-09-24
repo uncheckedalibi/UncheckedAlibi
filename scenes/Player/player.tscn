@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ct46uu470d7fr"]
+
+[ext_resource type="Script" uid="uid://ctiofqto4hgie" path="res://scripts/player/player.gd" id="1_cyojo"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_klfcy"]
+
+[node name="Player" type="CharacterBody3D" unique_id=1239060641]
+script = ExtResource("1_cyojo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2091652112]
+shape = SubResource("CapsuleShape3D_klfcy")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=892348270]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+current = true
