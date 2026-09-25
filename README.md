@@ -23,6 +23,7 @@
 
 <ul>
   <li><strong>Kamryn Furuichi</strong> - Programming / Scripting</li>
+  <li><strong>Mason Tsai</strong> - Programming / Scripting</li>
   <li><strong>Saya Nagae</strong> - 3D Environment Art</li>
   <li><strong>Katherine Yao</strong> - 3D Character Modeling / Rigging</li>
   <li><strong>Ayaka Yamanoshita</strong> - Music / SFX Production, 3D Art / Programming Support</li>
