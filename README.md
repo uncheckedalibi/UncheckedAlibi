@@ -22,7 +22,7 @@
 <h2>Meet the Team</h2>
 
 <ul>
-  <li><strong>Kamryn Furuichi</strong> - Programming / Scripting</li>
+  <li><strong>Kamryn Furuichi</strong> - Lead Programming / Scripting</li>
   <li><strong>Mason Tsai</strong> - Programming / Scripting</li>
   <li><strong>Saya Nagae</strong> - 3D Environment Art</li>
   <li><strong>Katherine Yao</strong> - 3D Character Modeling / Rigging</li>
