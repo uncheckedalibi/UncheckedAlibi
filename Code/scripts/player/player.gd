@@ -1,6 +1,10 @@
 extends CharacterBody3D
 #connecting to the camera in the Player Scene
 @onready var camera = $Camera3D
+@onready var raycast = $Camera3D/InteractionRay
+
+#defines with object is being interacted with
+var current_interactable = null
 
 # constants (const)
 const MOUSE_SENSITIVITY = 0.002
@@ -35,6 +39,7 @@ func _physics_process(delta: float) -> void:
 	
 	#Basically just means that players can move around
 	move_and_slide()
+
 # User inputs
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
