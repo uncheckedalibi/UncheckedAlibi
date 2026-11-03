@@ -65,5 +65,25 @@ shape = SubResource("ConcavePolygonShape3D_nha0i")
 
 [node name="Label3D" type="Label3D" parent="TestInteractive" unique_id=1460103585]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.112784624, 1.1517023, 2.203073)
+visible = false
+billboard = 1
+text = "Press E to interact"
+
+[node name="TestInteractive2" type="StaticBody3D" parent="." unique_id=857489633]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.558319, 0.019846201, 0)
+script = ExtResource("2_nha0i")
+
+[node name="TestInteractiveMesh" type="MeshInstance3D" parent="TestInteractive2" unique_id=1968689311]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.51322293, 2.1461875)
+layers = 3
+mesh = SubResource("SphereMesh_a6y01")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TestInteractive2" unique_id=931743824]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.51322293, 2.1461875)
+visible = false
+shape = SubResource("ConcavePolygonShape3D_nha0i")
+
+[node name="Label3D" type="Label3D" parent="TestInteractive2" unique_id=1874829296]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.112784624, 1.1517023, 2.203073)
 billboard = 1
 text = "Press E to interact"
