@@ -60,6 +60,7 @@ mesh = SubResource("SphereMesh_a6y01")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TestInteractive" unique_id=1998151725]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.51322293, 2.1461875)
+visible = false
 shape = SubResource("ConcavePolygonShape3D_nha0i")
 
 [node name="Label3D" type="Label3D" parent="TestInteractive" unique_id=1460103585]

@@ -1,4 +1,7 @@
 extends CharacterBody3D
+
+var window_move_speed: float = 400.0
+
 #connecting to the camera in the Player Scene
 @onready var camera = $Camera3D
 @onready var raycast = $Camera3D/InteractionRay
@@ -10,7 +13,7 @@ var current_interactable = null
 const MOUSE_SENSITIVITY = 0.002
 const MIN_LOOKANGLE : float = -80.0
 const MAX_LOOKANGLE : float = 90.0
-const SPEED = 5.0
+const SPEED = 3.0
 const JUMP_VELOCITY = 4.5
 
 #when the function starts
@@ -38,7 +41,13 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 	
 	#Basically just means that players can move around
-	move_and_slide()
+	move_and_slide()	
+	
+	var input_direction: float = Input.get_axis("turn_left", "turn_right")
+	if input_direction != 0.0:
+		# 2.0 = turn speed
+		rotate_y(-input_direction * 2.0 * delta)
+		
 
 # User inputs
 func _input(event: InputEvent) -> void:
@@ -50,3 +59,13 @@ func _input(event: InputEvent) -> void:
 			deg_to_rad(MIN_LOOKANGLE),
 			deg_to_rad(MAX_LOOKANGLE)
 		)
+	#needs another condition or every time "E" is pressed everything will react
+	if Input.is_action_just_pressed("interact"):
+		if $"../TestInteractive/Label3D".text == "Press E to interact":
+			$"../TestInteractive/Label3D".text = "Congratulations! Interaction kinda works :)"
+		else:
+			$"../TestInteractive/Label3D".text = "Press E to interact"
+			
+# To do (Immediate):
+# - Figure out how to do interactions on object directly in front of player
+# - Locking and unlocking the mouse
