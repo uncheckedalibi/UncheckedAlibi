@@ -28,7 +28,7 @@
   <li><strong>Conan Khong</strong> - Programming Intern</li>
   <li><strong>Saya Nagae</strong> - 3D Environment Art</li>
   <li><strong>Katherine Yao</strong> - 3D Character Modeling / Rigging</li>
-  <li><strong>Aidan Woo</strong> - 2d Art & Animation Intern</li>
+  <li><strong>Aidan Woo</strong> - 2D Art & Animation Intern</li>
   <li><strong>Ayaka Yamanoshita</strong> - Music / SFX Production, 3D Art / Programming Support</li>
 </ul>
 
