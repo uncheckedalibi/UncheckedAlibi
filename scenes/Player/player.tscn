@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://ct46uu470d7fr"]
 
-[ext_resource type="Script" uid="uid://ctiofqto4hgie" path="res://scripts/player/player.gd" id="1_cyojo"]
+[ext_resource type="Script" uid="uid://ctiofqto4hgie" path="res://Code/scripts/player/player.gd" id="1_cyojo"]
+[ext_resource type="Texture2D" uid="uid://djp1ykgn68dec" path="res://Assets/MagnifyingGlassReticle.png" id="2_1kbk7"]
+[ext_resource type="Script" uid="uid://dxa4reurugq58" path="res://scenes/Player/recticle.gd" id="3_gqjuk"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_klfcy"]
 
@@ -22,3 +24,20 @@ collision_mask = 3
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=868124915]
 mesh = SubResource("CapsuleMesh_a6y01")
+
+[node name="HUD_UI" type="CanvasLayer" parent="." unique_id=459392371]
+
+[node name="Recticle" type="TextureRect" parent="HUD_UI" unique_id=1640487172]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 560.0
+offset_top = 308.0
+offset_right = -560.0
+offset_bottom = -308.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_1kbk7")
+script = ExtResource("3_gqjuk")
+reticle_transparency = 0.5

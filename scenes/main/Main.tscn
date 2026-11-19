@@ -85,5 +85,6 @@ shape = SubResource("ConcavePolygonShape3D_nha0i")
 
 [node name="Label3D" type="Label3D" parent="TestInteractive2" unique_id=1874829296]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.112784624, 1.1517023, 2.203073)
+visible = false
 billboard = 1
 text = "Press E to interact"
