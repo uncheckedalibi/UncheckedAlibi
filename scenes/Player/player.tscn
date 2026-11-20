@@ -2,11 +2,19 @@
 
 [ext_resource type="Script" uid="uid://ctiofqto4hgie" path="res://Code/scripts/player/player.gd" id="1_cyojo"]
 [ext_resource type="Texture2D" uid="uid://djp1ykgn68dec" path="res://Assets/MagnifyingGlassReticle.png" id="2_1kbk7"]
+[ext_resource type="Shader" uid="uid://eorepgch5jk6" path="res://scenes/Player/dither.gdshader" id="2_c4h5g"]
 [ext_resource type="Script" uid="uid://dxa4reurugq58" path="res://scenes/Player/recticle.gd" id="3_gqjuk"]
+[ext_resource type="Texture2D" uid="uid://6yfkyry08ypo" path="res://Assets/ditheringpattern.png" id="3_uiqp4"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_klfcy"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_a6y01"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8ib2y"]
+shader = ExtResource("2_c4h5g")
+shader_parameter/scale = 2.0
+shader_parameter/dither_texture = ExtResource("3_uiqp4")
+shader_parameter/dark_color = Color(0.6419217, 0.20315778, 0.48137772, 1)
 
 [node name="Player" type="CharacterBody3D" unique_id=1239060641]
 script = ExtResource("1_cyojo")
@@ -27,7 +35,18 @@ mesh = SubResource("CapsuleMesh_a6y01")
 
 [node name="HUD_UI" type="CanvasLayer" parent="." unique_id=459392371]
 
+[node name="Dither" type="ColorRect" parent="HUD_UI" unique_id=1984749580]
+material = SubResource("ShaderMaterial_8ib2y")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+mouse_behavior_recursive = 1
+
 [node name="Recticle" type="TextureRect" parent="HUD_UI" unique_id=1640487172]
+z_index = 2
 texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -40,4 +59,4 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_1kbk7")
 script = ExtResource("3_gqjuk")
-reticle_transparency = 0.5
+reticle_transparency = 0.9
